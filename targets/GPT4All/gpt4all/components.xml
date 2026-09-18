@@ -1,0 +1,41 @@
+<Packages>
+    <ApplicationName>GPT4All</ApplicationName>
+    <ApplicationVersion>1.0.0</ApplicationVersion>
+    <Package>
+        <Name>Unspecified</Name>
+        <Title>Unspecified</Title>
+        <Description></Description>
+        <SortingPriority>0</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>3.4.0</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2024-11-11</InstallDate>
+        <Size>1173</Size>
+        <ForcedInstallation>true</ForcedInstallation>
+        <Virtual>true</Virtual>
+    </Package>
+    <Package>
+        <Name>devel</Name>
+        <Title>devel</Title>
+        <Description></Description>
+        <SortingPriority>0</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>3.4.0</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2024-11-11</InstallDate>
+        <Size>2495820</Size>
+        <Checkable>true</Checkable>
+    </Package>
+    <Package>
+        <Name>gpt4all</Name>
+        <Title>gpt4all</Title>
+        <Description></Description>
+        <SortingPriority>0</SortingPriority>
+        <TreeName moveChildren="false"></TreeName>
+        <Version>3.4.2</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2024-11-11</InstallDate>
+        <Size>2070003783</Size>
+        <ForcedInstallation>true</ForcedInstallation>
+    </Package>
+</Packages>

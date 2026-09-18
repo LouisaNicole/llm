@@ -1,0 +1,147 @@
+************************************* Invoked: Mon Nov 11 16:19:20 2024
+[0] Arguments: ./gpt4all-installer-linux.run
+[0] Operations sanity check succeeded.
+[0] Using metadata cache from "/home/ain/.cache/qt-installer-framework/9c11e018-d3aa-3c3a-9118-829c9ab85b1c"
+[0] Found 0 cached items.
+[0] Language: en-GB
+[23] Loaded control script ":/metadata/installer-config/installer_control_qs.qs"
+[23] Using control script: ":/metadata/installer-config/installer_control_qs.qs"
+[6250] Fetching latest update information...
+[6251] Downloading 1 items to cache.
+[6251] Retrieving information from remote repositories...
+[7658] Retrieving meta information from remote repository...
+[8899] Extracting meta information...
+[8900] Updating local cache with 1 new items...
+[8902] Loading component scripts...
+[11912] OverwriteTargetDirectory : Warning : You have selected an existing, non-empty directory for installation.
+Note that it will be completely wiped on uninstallation of this application.
+It is not advisable to install into this directory as installation might fail.
+Do you want to continue? Yes|No
+[365949] Loading component scripts...
+[367980] Selected components without dependencies:
+Unspecified 
+devel 
+gpt4all
+[367980] Installation space required: "2.18 GB" Temporary space required: "940.79 MB" Local repository size: "0.00 bytes"
+[367981] Cache and install directories are on the same volume. Volume mount point: "/" Free space available: "142.35 GB"
+[369257] backup  operation: Mkdir
+[369257] 	- arguments: /home/ain/gpt4all
+[369257] Done
+[369257] perform  operation: Mkdir
+[369257] 	- arguments: /home/ain/gpt4all
+[369257] Done
+[369257] Preparing the installation...
+[369257] Install size: 3 components
+[369257] Downloading packages...
+[369257] Downloading archive "3.4.2bin.7z.sha1" for component gpt4all.
+[370515] Downloading archive "3.4.2bin.7z" for component gpt4all.
+[372226] Downloading archive "3.4.2lib.7z.sha1" for component gpt4all.
+[373118] Downloading archive "3.4.2lib.7z" for component gpt4all.
+[478483] Downloading archive "3.4.2plugins.7z.sha1" for component gpt4all.
+[479480] Downloading archive "3.4.2plugins.7z" for component gpt4all.
+[481558] Downloading archive "3.4.2qml.7z.sha1" for component gpt4all.
+[482476] Downloading archive "3.4.2qml.7z" for component gpt4all.
+[508545] Downloading archive "3.4.2resources.7z.sha1" for component gpt4all.
+[509489] Downloading archive "3.4.2resources.7z" for component gpt4all.
+[567905] Downloading archive "3.4.2share.7z.sha1" for component gpt4all.
+[568814] Downloading archive "3.4.2share.7z" for component gpt4all.
+[569677] Downloading archive "3.4.2translations.7z.sha1" for component gpt4all.
+[570647] Downloading archive "3.4.2translations.7z" for component gpt4all.
+[572322] Downloading archive "3.4.2content.7z.sha1" for component gpt4all.
+[573303] Downloading archive "3.4.2content.7z" for component gpt4all.
+[574263] Preparing to unpack components...
+[574264] backup gpt4all concurrent operation: Extract
+[574264] 	- arguments: installer://gpt4all/3.4.2plugins.7z, /home/ain/gpt4all
+[574264] Started
+[574264] backup gpt4all concurrent operation: Extract
+[574264] 	- arguments: installer://gpt4all/3.4.2translations.7z, /home/ain/gpt4all
+[574264] Started
+[574264] backup Unspecified concurrent operation: Extract
+[574264] 	- arguments: installer://Unspecified/3.4.0lib.7z, /home/ain/gpt4all
+[574264] Started
+[574264] backup gpt4all concurrent operation: Extract
+[574264] 	- arguments: installer://gpt4all/3.4.2share.7z, /home/ain/gpt4all
+[574264] Started
+[574264] backup devel concurrent operation: Extract
+[574264] 	- arguments: installer://devel/3.4.0include.7z, /home/ain/gpt4all
+[574264] Started
+[574264] backup devel concurrent operation: Extract
+[574264] 	- arguments: installer://devel/3.4.0lib.7z, /home/ain/gpt4all
+[574264] Started
+[574265] backup gpt4all concurrent operation: Extract
+[574265] 	- arguments: installer://gpt4all/3.4.2qml.7z, /home/ain/gpt4all
+[574265] Started
+[574265] backup gpt4all concurrent operation: Extract
+[574265] 	- arguments: installer://gpt4all/3.4.2lib.7z, /home/ain/gpt4all
+[574265] Started
+[574265] backup gpt4all concurrent operation: Extract
+[574265] 	- arguments: installer://gpt4all/3.4.2bin.7z, /home/ain/gpt4all
+[574265] Started
+[574265] backup gpt4all concurrent operation: Extract
+[574265] 	- arguments: installer://gpt4all/3.4.2content.7z, /home/ain/gpt4all
+[574265] Started
+[574265] backup gpt4all concurrent operation: Extract
+[574265] 	- arguments: installer://gpt4all/3.4.2resources.7z, /home/ain/gpt4all
+[574265] Started
+[588476] Unpacking components...
+[588477] perform gpt4all concurrent operation: Extract
+[588477] 	- arguments: installer://gpt4all/3.4.2resources.7z, /home/ain/gpt4all
+[588477] Started
+[588477] perform gpt4all concurrent operation: Extract
+[588477] 	- arguments: installer://gpt4all/3.4.2lib.7z, /home/ain/gpt4all
+[588477] Started
+[588477] perform gpt4all concurrent operation: Extract
+[588477] 	- arguments: installer://gpt4all/3.4.2qml.7z, /home/ain/gpt4all
+[588477] Started
+[588477] perform gpt4all concurrent operation: Extract
+[588477] 	- arguments: installer://gpt4all/3.4.2plugins.7z, /home/ain/gpt4all
+[588477] Started
+[588477] perform gpt4all concurrent operation: Extract
+[588477] 	- arguments: installer://gpt4all/3.4.2bin.7z, /home/ain/gpt4all
+[588477] Started
+[588477] perform gpt4all concurrent operation: Extract
+[588477] 	- arguments: installer://gpt4all/3.4.2translations.7z, /home/ain/gpt4all
+[588477] Started
+[588477] perform devel concurrent operation: Extract
+[588477] 	- arguments: installer://devel/3.4.0lib.7z, /home/ain/gpt4all
+[588477] Started
+[588477] perform gpt4all concurrent operation: Extract
+[588477] 	- arguments: installer://gpt4all/3.4.2share.7z, /home/ain/gpt4all
+[588477] Started
+[588477] perform gpt4all concurrent operation: Extract
+[588477] 	- arguments: installer://gpt4all/3.4.2content.7z, /home/ain/gpt4all
+[588477] Started
+[588477] perform Unspecified concurrent operation: Extract
+[588477] 	- arguments: installer://Unspecified/3.4.0lib.7z, /home/ain/gpt4all
+[588477] Started
+[588477] perform devel concurrent operation: Extract
+[588477] 	- arguments: installer://devel/3.4.0include.7z, /home/ain/gpt4all
+[588477] Started
+[604150] Installing component gpt4all
+[604150] backup gpt4all operation: CreateDesktopEntry
+[604150] 	- arguments: /home/ain/Desktop/GPT4All.desktop, Type=Application
+Terminal=false
+Exec="/home/ain/gpt4all/bin/chat"
+Name=GPT4All
+Icon=/home/ain/gpt4all/gpt4all-48.png
+Name[en_US]=GPT4All
+[604150] Done
+[604150] perform gpt4all operation: CreateDesktopEntry
+[604150] 	- arguments: /home/ain/Desktop/GPT4All.desktop, Type=Application
+Terminal=false
+Exec="/home/ain/gpt4all/bin/chat"
+Name=GPT4All
+Icon=/home/ain/gpt4all/gpt4all-48.png
+Name[en_US]=GPT4All
+[604150] Done
+[604151] backup gpt4all operation: License
+[604151] 	- arguments:
+[604151] Done
+[604151] perform gpt4all operation: License
+[604151] 	- arguments:
+[604151] Done
+[604152] Writing maintenance tool: "/home/ain/gpt4all/maintenancetool.new"
+[604152] Writing maintenance tool.
+[604249] Wrote permissions for maintenance tool.
+[604253] Maintenance tool hard restart: false.
+[604253] Installation finished!

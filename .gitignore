@@ -1,0 +1,34 @@
+# ===== Datasets =====
+dataset/
+
+# ===== Experiment results =====
+results/
+
+# ===== Model weights =====
+*.gguf
+
+# ===== Downloaded binaries / packages =====
+*.AppImage
+*.tgz
+
+# ===== Shared libraries =====
+*.so
+*.so.*
+
+# ===== Compiled binaries =====
+targets/llama.cpp/llama-cli
+targets/koboldcpp/koboldcpp-linux-x64-cuda1210
+
+# ===== Python =====
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# ===== Cache =====
+.cache/
+
+# ===== Editor / OS =====
+.vscode/
+.idea/
+.DS_Store

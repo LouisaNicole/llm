@@ -1,0 +1,999 @@
+[90m5:41PM[0m [32mINF[0m [1menv file found, loading environment variables from file[0m [36menvFile=[0m.env
+[90m5:41PM[0m [32mINF[0m [1menv file found, loading environment variables from file[0m [36menvFile=[0m/etc/localai.env
+[90m5:41PM[0m DBG Setting logging to debug
+[90m5:41PM[0m [32mINF[0m [1mStarting LocalAI using 32 threads, with models path: /home/listen-llm/ikwys/targets/LocalAI/models[0m
+[90m5:41PM[0m [32mINF[0m [1mLocalAI version: v2.25.0 (07655c0c2e0e5fe2bca86339a12237b69d258636)[0m
+[90m5:41PM[0m DBG CPU capabilities: [3dnowprefetch abm acpi adx aes aperfmperf apic arat arch_capabilities arch_lbr arch_perfmon art avx avx2 avx_vnni bmi1 bmi2 bts clflush clflushopt clwb cmov constant_tsc cpuid cpuid_fault cx16 cx8 de ds_cpl dtes64 dtherm dts epb ept ept_ad erms est f16c flexpriority flush_l1d fma fpu fsgsbase fsrm fxsr gfni hfi ht hwp hwp_act_window hwp_epp hwp_notify hwp_pkg_req ibpb ibrs ibrs_enhanced ibt ida intel_pt invpcid invpcid_single lahf_lm lm mca mce md_clear mmx monitor movbe movdir64b movdiri msr mtrr nonstop_tsc nopl nx ospke pae pat pbe pcid pclmulqdq pdcm pdpe1gb pebs pge pku pln pni popcnt pse pse36 pts rdpid rdrand rdseed rdtscp rep_good sdbg sep serialize sha_ni smap smep split_lock_detect ss ssbd sse sse2 sse4_1 sse4_2 ssse3 stibp syscall tm tm2 tpr_shadow tsc tsc_adjust tsc_deadline_timer tsc_known_freq umip vaes vme vmx vnmi vpclmulqdq vpid waitpkg x2apic xgetbv1 xsave xsavec xsaveopt xsaves xtopology xtpr]
+[90m5:41PM[0m DBG GPU count: 1
+[90m5:41PM[0m DBG GPU: card #0 @0000:01:00.0
+[90m5:41PM[0m DBG guessDefaultsFromFile: template already set [36mname=[0mggml-Mistral-7b-instruct-cpu
+[90m5:41PM[0m DBG guessDefaultsFromFile: template already set [36mname=[0mggml-Mistral-7b-instruct-gpu
+[90m5:41PM[0m [32mINF[0m [1mPreloading models from /home/listen-llm/ikwys/targets/LocalAI/models[0m
+
+[38;5;252;1m[0m[38;5;252;1m[0m  [38;5;252;1mModel name[0m[38;5;252m: [0m[38;5;252;3mggml-Mistral-7b-instruct-cpu[0m[38;5;252m [0m[38;5;252m [0m[38;5;252m [0m[38;5;252m [0m[38;5;252m [0m[38;5;252m [0m[38;5;252m [0m[38;5;252m [0m[38;5;252m [0m[38;5;252m [0m[38;5;252m [0m[38;5;252m [0m[38;5;252m [0m[38;5;252m [0m[38;5;252m [0m[38;5;252m [0m[38;5;252m [0m[38;5;252m [0m[38;5;252m [0m[38;5;252m [0m[38;5;252m [0m[38;5;252m [0m[38;5;252m [0m[38;5;252m [0m[38;5;252m [0m[38;5;252m [0m[38;5;252m [0m[38;5;252m [0m[38;5;252m [0m[38;5;252m [0m[38;5;252m [0m[38;5;252m [0m[38;5;252m [0m[38;5;252m [0m[38;5;252m [0m[38;5;252m [0m
+
+
+
+[38;5;252;1m[0m[38;5;252;1m[0m  [38;5;252;1mModel name[0m[38;5;252m: [0m[38;5;252;3mggml-Mistral-7b-instruct-gpu[0m[38;5;252m [0m[38;5;252m [0m[38;5;252m [0m[38;5;252m [0m[38;5;252m [0m[38;5;252m [0m[38;5;252m [0m[38;5;252m [0m[38;5;252m [0m[38;5;252m [0m[38;5;252m [0m[38;5;252m [0m[38;5;252m [0m[38;5;252m [0m[38;5;252m [0m[38;5;252m [0m[38;5;252m [0m[38;5;252m [0m[38;5;252m [0m[38;5;252m [0m[38;5;252m [0m[38;5;252m [0m[38;5;252m [0m[38;5;252m [0m[38;5;252m [0m[38;5;252m [0m[38;5;252m [0m[38;5;252m [0m[38;5;252m [0m[38;5;252m [0m[38;5;252m [0m[38;5;252m [0m[38;5;252m [0m[38;5;252m [0m[38;5;252m [0m[38;5;252m [0m
+
+
+[90m5:41PM[0m DBG Model: ggml-Mistral-7b-instruct-cpu (config: {PredictionOptions:{Model: Language: Translate:false N:0 TopP:0xc0005694c0 TopK:0xc0005694c8 Temperature:0xc0005694d0 Maxtokens:0xc000569500 Echo:false Batch:0 IgnoreEOS:false RepeatPenalty:0 RepeatLastN:0 Keep:0 FrequencyPenalty:0 PresencePenalty:0 TFZ:0xc0005694f8 TypicalP:0xc0005694f0 Seed:0xc000569518 NegativePrompt: RopeFreqBase:0 RopeFreqScale:0 NegativePromptScale:0 UseFastTokenizer:false ClipSkip:0 Tokenizer:} Name:ggml-Mistral-7b-instruct-cpu F16:0xc0005694b8 Threads:0xc000569440 Debug:0xc000569510 Roles:map[] Embeddings:0xc000569511 Backend:llama TemplateConfig:{Chat:[INST]{{.Input}}[/INST]
+ ChatMessage: Completion:[INST]{{.Input}}[/INST]
+ Edit: Functions: UseTokenizerTemplate:false JoinChatMessagesByCharacter:<nil> Multimodal: JinjaTemplate:false} KnownUsecaseStrings:[] KnownUsecases:<nil> PromptStrings:[] InputStrings:[] InputToken:[] functionCallString: functionCallNameString: ResponseFormat: ResponseFormatMap:map[] FunctionsConfig:{DisableNoAction:false GrammarConfig:{ParallelCalls:false DisableParallelNewLines:false MixedMode:false NoMixedFreeString:false NoGrammar:false Prefix: ExpectStringsAfterJSON:false PropOrder: SchemaType:} NoActionFunctionName: NoActionDescriptionName: ResponseRegex:[] JSONRegexMatch:[] ReplaceFunctionResults:[] ReplaceLLMResult:[] CaptureLLMResult:[] FunctionNameKey: FunctionArgumentsKey:} FeatureFlag:map[] LLMConfig:{SystemPrompt: TensorSplit: MainGPU: RMSNormEps:0 NGQA:0 PromptCachePath: PromptCacheAll:false PromptCacheRO:false MirostatETA:0xc0005694e8 MirostatTAU:0xc0005694e0 Mirostat:0xc0005694d8 NGPULayers:0xc000569448 MMap:0xc000569510 MMlock:0xc000569511 LowVRAM:0xc000569511 Grammar: StopWords:[] Cutstrings:[] ExtractRegex:[] TrimSpace:[] TrimSuffix:[] ContextSize:0xc000569430 NUMA:false LoraAdapter: LoraBase: LoraAdapters:[] LoraScales:[] LoraScale:0 NoMulMatQ:false DraftModel: NDraft:0 Quantization: LoadFormat: GPUMemoryUtilization:0 TrustRemoteCode:false EnforceEager:false SwapSpace:0 MaxModelLen:0 TensorParallelSize:0 MMProj: FlashAttention:false NoKVOffloading:false CacheTypeK: CacheTypeV: RopeScaling: ModelType: YarnExtFactor:0 YarnAttnFactor:0 YarnBetaFast:0 YarnBetaSlow:0 CFGScale:0} AutoGPTQ:{ModelBaseName: Device: Triton:false UseFastTokenizer:false} Diffusers:{CUDA:false PipelineType: SchedulerType: EnableParameters: IMG2IMG:false ClipSkip:0 ClipModel: ClipSubFolder: ControlNet:} Step:0 GRPC:{Attempts:0 AttemptsSleepTime:0} TTSConfig:{Voice: VallE:{AudioPath:}} CUDA:false DownloadFiles:[] Description: Usage: Options:[]})
+[90m5:41PM[0m DBG Model: ggml-Mistral-7b-instruct-gpu (config: {PredictionOptions:{Model:ggml-Mistral-7b-instruct.gguf Language: Translate:false N:0 TopP:0xc0005698a0 TopK:0xc0005698a8 Temperature:0xc0005698b0 Maxtokens:0xc0005698f0 Echo:false Batch:0 IgnoreEOS:false RepeatPenalty:0 RepeatLastN:0 Keep:0 FrequencyPenalty:0 PresencePenalty:0 TFZ:0xc0005698d8 TypicalP:0xc0005698d0 Seed:0xc000569908 NegativePrompt: RopeFreqBase:0 RopeFreqScale:0 NegativePromptScale:0 UseFastTokenizer:false ClipSkip:0 Tokenizer:} Name:ggml-Mistral-7b-instruct-gpu F16:0xc000569828 Threads:0xc000569820 Debug:0xc000569900 Roles:map[] Embeddings:0xc000569901 Backend:llama TemplateConfig:{Chat:[INST]{{.Input}}[/INST]
+ ChatMessage: Completion:[INST]{{.Input}}[/INST]
+ Edit: Functions: UseTokenizerTemplate:false JoinChatMessagesByCharacter:<nil> Multimodal: JinjaTemplate:false} KnownUsecaseStrings:[] KnownUsecases:<nil> PromptStrings:[] InputStrings:[] InputToken:[] functionCallString: functionCallNameString: ResponseFormat: ResponseFormatMap:map[] FunctionsConfig:{DisableNoAction:false GrammarConfig:{ParallelCalls:false DisableParallelNewLines:false MixedMode:false NoMixedFreeString:false NoGrammar:false Prefix: ExpectStringsAfterJSON:false PropOrder: SchemaType:} NoActionFunctionName: NoActionDescriptionName: ResponseRegex:[] JSONRegexMatch:[] ReplaceFunctionResults:[] ReplaceLLMResult:[] CaptureLLMResult:[] FunctionNameKey: FunctionArgumentsKey:} FeatureFlag:map[] LLMConfig:{SystemPrompt: TensorSplit: MainGPU: RMSNormEps:0 NGQA:0 PromptCachePath: PromptCacheAll:false PromptCacheRO:false MirostatETA:0xc0005698c8 MirostatTAU:0xc0005698c0 Mirostat:0xc0005698b8 NGPULayers:0xc000569850 MMap:0xc000569900 MMlock:0xc000569901 LowVRAM:0xc000569901 Grammar: StopWords:[] Cutstrings:[] ExtractRegex:[] TrimSpace:[] TrimSuffix:[] ContextSize:0xc000569810 NUMA:false LoraAdapter: LoraBase: LoraAdapters:[] LoraScales:[] LoraScale:0 NoMulMatQ:false DraftModel: NDraft:0 Quantization: LoadFormat: GPUMemoryUtilization:0 TrustRemoteCode:false EnforceEager:false SwapSpace:0 MaxModelLen:0 TensorParallelSize:0 MMProj: FlashAttention:false NoKVOffloading:false CacheTypeK: CacheTypeV: RopeScaling: ModelType: YarnExtFactor:0 YarnAttnFactor:0 YarnBetaFast:0 YarnBetaSlow:0 CFGScale:0} AutoGPTQ:{ModelBaseName: Device: Triton:false UseFastTokenizer:false} Diffusers:{CUDA:false PipelineType: SchedulerType: EnableParameters: IMG2IMG:false ClipSkip:0 ClipModel: ClipSubFolder: ControlNet:} Step:0 GRPC:{Attempts:0 AttemptsSleepTime:0} TTSConfig:{Voice: VallE:{AudioPath:}} CUDA:false DownloadFiles:[] Description: Usage: Options:[]})
+[90m5:41PM[0m DBG Extracting backend assets files to /tmp/localai/backend_data
+[90m5:41PM[0m DBG processing api keys runtime update
+[90m5:41PM[0m DBG processing external_backends.json
+[90m5:41PM[0m DBG external backends loaded from external_backends.json
+[90m5:41PM[0m [32mINF[0m [1mcore/startup process completed![0m
+[90m5:41PM[0m DBG No configuration file found at /tmp/localai/upload/uploadedFiles.json
+[90m5:41PM[0m DBG No configuration file found at /tmp/localai/config/assistants.json
+[90m5:41PM[0m DBG No configuration file found at /tmp/localai/config/assistantsFile.json
+[90m5:41PM[0m [32mINF[0m [1mLocalAI API is listening! Please connect to the endpoint for API documentation.[0m [36mendpoint=[0mhttp://0.0.0.0:8080
+[90m5:41PM[0m DBG Request received: {"model":"ggml-Mistral-7b-instruct-gpu","language":"","translate":false,"n":0,"top_p":null,"top_k":null,"temperature":0.9,"max_tokens":null,"echo":false,"batch":0,"ignore_eos":false,"repeat_penalty":0,"repeat_last_n":0,"n_keep":0,"frequency_penalty":0,"presence_penalty":0,"tfz":null,"typical_p":null,"seed":null,"negative_prompt":"","rope_freq_base":0,"rope_freq_scale":0,"negative_prompt_scale":0,"use_fast_tokenizer":false,"clip_skip":0,"tokenizer":"","file":"","size":"","prompt":null,"instruction":"","input":null,"stop":null,"messages":[{"role":"user","content":"How are you?"}],"functions":null,"function_call":null,"stream":false,"mode":0,"step":0,"grammar":"","grammar_json_functions":null,"backend":"","model_base_name":""}
+[90m5:41PM[0m DBG guessDefaultsFromFile: template already set [36mname=[0mggml-Mistral-7b-instruct-gpu
+[90m5:41PM[0m DBG Configuration read: &{PredictionOptions:{Model:ggml-Mistral-7b-instruct.gguf Language: Translate:false N:0 TopP:0xc0005698a0 TopK:0xc0005698a8 Temperature:0xc000525f80 Maxtokens:0xc0005698f0 Echo:false Batch:0 IgnoreEOS:false RepeatPenalty:0 RepeatLastN:0 Keep:0 FrequencyPenalty:0 PresencePenalty:0 TFZ:0xc0005698d8 TypicalP:0xc0005698d0 Seed:0xc000569908 NegativePrompt: RopeFreqBase:0 RopeFreqScale:0 NegativePromptScale:0 UseFastTokenizer:false ClipSkip:0 Tokenizer:} Name:ggml-Mistral-7b-instruct-gpu F16:0xc000569828 Threads:0xc000569820 Debug:0xc000912120 Roles:map[] Embeddings:0xc000569901 Backend:llama TemplateConfig:{Chat:[INST]{{.Input}}[/INST]
+ ChatMessage: Completion:[INST]{{.Input}}[/INST]
+ Edit: Functions: UseTokenizerTemplate:false JoinChatMessagesByCharacter:<nil> Multimodal: JinjaTemplate:false} KnownUsecaseStrings:[] KnownUsecases:<nil> PromptStrings:[] InputStrings:[] InputToken:[] functionCallString: functionCallNameString: ResponseFormat: ResponseFormatMap:map[] FunctionsConfig:{DisableNoAction:false GrammarConfig:{ParallelCalls:false DisableParallelNewLines:false MixedMode:false NoMixedFreeString:false NoGrammar:false Prefix: ExpectStringsAfterJSON:false PropOrder: SchemaType:} NoActionFunctionName: NoActionDescriptionName: ResponseRegex:[] JSONRegexMatch:[] ReplaceFunctionResults:[] ReplaceLLMResult:[] CaptureLLMResult:[] FunctionNameKey: FunctionArgumentsKey:} FeatureFlag:map[] LLMConfig:{SystemPrompt: TensorSplit: MainGPU: RMSNormEps:0 NGQA:0 PromptCachePath: PromptCacheAll:false PromptCacheRO:false MirostatETA:0xc0005698c8 MirostatTAU:0xc0005698c0 Mirostat:0xc0005698b8 NGPULayers:0xc000569850 MMap:0xc000569900 MMlock:0xc000569901 LowVRAM:0xc000569901 Grammar: StopWords:[] Cutstrings:[] ExtractRegex:[] TrimSpace:[] TrimSuffix:[] ContextSize:0xc000569810 NUMA:false LoraAdapter: LoraBase: LoraAdapters:[] LoraScales:[] LoraScale:0 NoMulMatQ:false DraftModel: NDraft:0 Quantization: LoadFormat: GPUMemoryUtilization:0 TrustRemoteCode:false EnforceEager:false SwapSpace:0 MaxModelLen:0 TensorParallelSize:0 MMProj: FlashAttention:false NoKVOffloading:false CacheTypeK: CacheTypeV: RopeScaling: ModelType: YarnExtFactor:0 YarnAttnFactor:0 YarnBetaFast:0 YarnBetaSlow:0 CFGScale:0} AutoGPTQ:{ModelBaseName: Device: Triton:false UseFastTokenizer:false} Diffusers:{CUDA:false PipelineType: SchedulerType: EnableParameters: IMG2IMG:false ClipSkip:0 ClipModel: ClipSubFolder: ControlNet:} Step:0 GRPC:{Attempts:0 AttemptsSleepTime:0} TTSConfig:{Voice: VallE:{AudioPath:}} CUDA:false DownloadFiles:[] Description: Usage: Options:[]}
+[90m5:41PM[0m DBG Parameters: &{PredictionOptions:{Model:ggml-Mistral-7b-instruct.gguf Language: Translate:false N:0 TopP:0xc0005698a0 TopK:0xc0005698a8 Temperature:0xc000525f80 Maxtokens:0xc0005698f0 Echo:false Batch:0 IgnoreEOS:false RepeatPenalty:0 RepeatLastN:0 Keep:0 FrequencyPenalty:0 PresencePenalty:0 TFZ:0xc0005698d8 TypicalP:0xc0005698d0 Seed:0xc000569908 NegativePrompt: RopeFreqBase:0 RopeFreqScale:0 NegativePromptScale:0 UseFastTokenizer:false ClipSkip:0 Tokenizer:} Name:ggml-Mistral-7b-instruct-gpu F16:0xc000569828 Threads:0xc000569820 Debug:0xc000912120 Roles:map[] Embeddings:0xc000569901 Backend:llama TemplateConfig:{Chat:[INST]{{.Input}}[/INST]
+ ChatMessage: Completion:[INST]{{.Input}}[/INST]
+ Edit: Functions: UseTokenizerTemplate:false JoinChatMessagesByCharacter:<nil> Multimodal: JinjaTemplate:false} KnownUsecaseStrings:[] KnownUsecases:<nil> PromptStrings:[] InputStrings:[] InputToken:[] functionCallString: functionCallNameString: ResponseFormat: ResponseFormatMap:map[] FunctionsConfig:{DisableNoAction:false GrammarConfig:{ParallelCalls:false DisableParallelNewLines:false MixedMode:false NoMixedFreeString:false NoGrammar:false Prefix: ExpectStringsAfterJSON:false PropOrder: SchemaType:} NoActionFunctionName: NoActionDescriptionName: ResponseRegex:[] JSONRegexMatch:[] ReplaceFunctionResults:[] ReplaceLLMResult:[] CaptureLLMResult:[] FunctionNameKey: FunctionArgumentsKey:} FeatureFlag:map[] LLMConfig:{SystemPrompt: TensorSplit: MainGPU: RMSNormEps:0 NGQA:0 PromptCachePath: PromptCacheAll:false PromptCacheRO:false MirostatETA:0xc0005698c8 MirostatTAU:0xc0005698c0 Mirostat:0xc0005698b8 NGPULayers:0xc000569850 MMap:0xc000569900 MMlock:0xc000569901 LowVRAM:0xc000569901 Grammar: StopWords:[] Cutstrings:[] ExtractRegex:[] TrimSpace:[] TrimSuffix:[] ContextSize:0xc000569810 NUMA:false LoraAdapter: LoraBase: LoraAdapters:[] LoraScales:[] LoraScale:0 NoMulMatQ:false DraftModel: NDraft:0 Quantization: LoadFormat: GPUMemoryUtilization:0 TrustRemoteCode:false EnforceEager:false SwapSpace:0 MaxModelLen:0 TensorParallelSize:0 MMProj: FlashAttention:false NoKVOffloading:false CacheTypeK: CacheTypeV: RopeScaling: ModelType: YarnExtFactor:0 YarnAttnFactor:0 YarnBetaFast:0 YarnBetaSlow:0 CFGScale:0} AutoGPTQ:{ModelBaseName: Device: Triton:false UseFastTokenizer:false} Diffusers:{CUDA:false PipelineType: SchedulerType: EnableParameters: IMG2IMG:false ClipSkip:0 ClipModel: ClipSubFolder: ControlNet:} Step:0 GRPC:{Attempts:0 AttemptsSleepTime:0} TTSConfig:{Voice: VallE:{AudioPath:}} CUDA:false DownloadFiles:[] Description: Usage: Options:[]}
+[90m5:41PM[0m DBG Prompt (before templating): How are you?
+[90m5:41PM[0m DBG Template found, input modified to: [INST]How are you?[/INST]
+
+[90m5:41PM[0m DBG Prompt (after templating): [INST]How are you?[/INST]
+
+[90m5:41PM[0m [32mINF[0m [1mLoading model 'ggml-Mistral-7b-instruct-gpu' with backend llama[0m
+[90m5:41PM[0m DBG llama-cpp is an alias of llama-cpp
+[90m5:41PM[0m DBG Loading model in memory from file: /home/listen-llm/ikwys/targets/LocalAI/models/ggml-Mistral-7b-instruct.gguf
+[90m5:41PM[0m DBG Loading Model ggml-Mistral-7b-instruct-gpu with gRPC (file: /home/listen-llm/ikwys/targets/LocalAI/models/ggml-Mistral-7b-instruct.gguf) (backend: llama-cpp): {backendString:llama model:ggml-Mistral-7b-instruct.gguf modelID:ggml-Mistral-7b-instruct-gpu assetDir:/tmp/localai/backend_data context:{emptyCtx:{}} gRPCOptions:0xc000148588 externalBackends:map[] grpcAttempts:20 grpcAttemptsDelay:2 singleActiveBackend:false parallelRequests:false}
+[90m5:41PM[0m DBG [llama-cpp-fallback] llama-cpp variant available
+[90m5:41PM[0m [32mINF[0m [1m[llama-cpp] attempting to load with AVX2 variant[0m
+[90m5:41PM[0m DBG ld.so found
+[90m5:41PM[0m DBG Loading GRPC Process: /tmp/localai/backend_data/backend-assets/lib/ld.so
+[90m5:41PM[0m DBG GRPC Service for ggml-Mistral-7b-instruct-gpu will be running at: '127.0.0.1:42843'
+[90m5:41PM[0m DBG GRPC Service state dir: /tmp/go-processmanager3417168566
+[90m5:41PM[0m DBG GRPC Service Started
+[90m5:41PM[0m DBG Wait for the service to start up
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr I0000 00:00:1737394909.393946    3736 config.cc:230] gRPC experiments enabled: call_status_override_on_cancellation, event_engine_dns, event_engine_listener, http2_stats_fix, monitoring_experiment, pick_first_new, trace_record_callops, work_serializer_clears_time_cache, work_serializer_dispatch
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr I0000 00:00:1737394909.394081    3736 ev_epoll1_linux.cc:125] grpc epoll fd: 3
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr I0000 00:00:1737394909.394178    3736 server_builder.cc:392] Synchronous server. Num CQs: 1, Min pollers: 1, Max Pollers: 2, CQ timeout (msec): 10000
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr I0000 00:00:1737394909.394887    3736 ev_epoll1_linux.cc:359] grpc epoll fd: 4
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr I0000 00:00:1737394909.395086    3736 tcp_socket_utils.cc:634] TCP_USER_TIMEOUT is available. TCP_USER_TIMEOUT will be used thereafter
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stdout Server listening on 127.0.0.1:42843
+[90m5:41PM[0m DBG GRPC Service Ready
+[90m5:41PM[0m DBG GRPC: Loading model with options: {state:{NoUnkeyedLiterals:{} DoNotCompare:[] DoNotCopy:[] atomicMessageInfo:<nil>} sizeCache:0 unknownFields:[] Model:ggml-Mistral-7b-instruct.gguf ContextSize:4096 Seed:799301164 NBatch:512 F16Memory:true MLock:false MMap:true VocabOnly:false LowVRAM:false Embeddings:false NUMA:false NGPULayers:33 MainGPU: TensorSplit: Threads:32 LibrarySearchPath: RopeFreqBase:0 RopeFreqScale:0 RMSNormEps:0 NGQA:0 ModelFile:/home/listen-llm/ikwys/targets/LocalAI/models/ggml-Mistral-7b-instruct.gguf Device: UseTriton:false ModelBaseName: UseFastTokenizer:false PipelineType: SchedulerType: CUDA:false CFGScale:0 IMG2IMG:false CLIPModel: CLIPSubfolder: CLIPSkip:0 ControlNet: Tokenizer: LoraBase: LoraAdapter: LoraScale:0 NoMulMatQ:false DraftModel: AudioPath: Quantization: GPUMemoryUtilization:0 TrustRemoteCode:false EnforceEager:false SwapSpace:0 MaxModelLen:0 TensorParallelSize:0 LoadFormat: MMProj: RopeScaling: YarnExtFactor:0 YarnAttnFactor:0 YarnBetaFast:0 YarnBetaSlow:0 Type: FlashAttention:false NoKVOffload:false ModelPath:/home/listen-llm/ikwys/targets/LocalAI/models LoraAdapters:[] LoraScales:[] Options:[] CacheTypeKey: CacheTypeValue:}
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llama_model_loader: loaded meta data with 37 key-value pairs and 291 tensors from /home/listen-llm/ikwys/targets/LocalAI/models/ggml-Mistral-7b-instruct.gguf (version GGUF V3 (latest))
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llama_model_loader: Dumping metadata keys/values. Note: KV overrides do not apply in this output.
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llama_model_loader: - kv   0:                       general.architecture str              = llama
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llama_model_loader: - kv   1:                               general.type str              = model
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llama_model_loader: - kv   2:                               general.name str              = Mistral 7B Instruct v0.3
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llama_model_loader: - kv   3:                            general.version str              = v0.3
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llama_model_loader: - kv   4:                           general.finetune str              = Instruct
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llama_model_loader: - kv   5:                           general.basename str              = Mistral
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llama_model_loader: - kv   6:                         general.size_label str              = 7B
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llama_model_loader: - kv   7:                            general.license str              = apache-2.0
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llama_model_loader: - kv   8:                   general.base_model.count u32              = 1
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llama_model_loader: - kv   9:                  general.base_model.0.name str              = Mistral 7B v0.3
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llama_model_loader: - kv  10:               general.base_model.0.version str              = v0.3
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llama_model_loader: - kv  11:          general.base_model.0.organization str              = Mistralai
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llama_model_loader: - kv  12:              general.base_model.0.repo_url str              = https://huggingface.co/mistralai/Mist...
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llama_model_loader: - kv  13:                          llama.block_count u32              = 32
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llama_model_loader: - kv  14:                       llama.context_length u32              = 32768
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llama_model_loader: - kv  15:                     llama.embedding_length u32              = 4096
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llama_model_loader: - kv  16:                  llama.feed_forward_length u32              = 14336
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llama_model_loader: - kv  17:                 llama.attention.head_count u32              = 32
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llama_model_loader: - kv  18:              llama.attention.head_count_kv u32              = 8
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llama_model_loader: - kv  19:                       llama.rope.freq_base f32              = 1000000.000000
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llama_model_loader: - kv  20:     llama.attention.layer_norm_rms_epsilon f32              = 0.000010
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llama_model_loader: - kv  21:                          general.file_type u32              = 15
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llama_model_loader: - kv  22:                           llama.vocab_size u32              = 32768
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llama_model_loader: - kv  23:                 llama.rope.dimension_count u32              = 128
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llama_model_loader: - kv  24:            tokenizer.ggml.add_space_prefix bool             = true
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llama_model_loader: - kv  25:                       tokenizer.ggml.model str              = llama
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llama_model_loader: - kv  26:                         tokenizer.ggml.pre str              = default
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llama_model_loader: - kv  27:                      tokenizer.ggml.tokens arr[str,32768]   = ["<unk>", "<s>", "</s>", "[INST]", "[...
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llama_model_loader: - kv  28:                      tokenizer.ggml.scores arr[f32,32768]   = [-1000.000000, -1000.000000, -1000.00...
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llama_model_loader: - kv  29:                  tokenizer.ggml.token_type arr[i32,32768]   = [3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, ...
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llama_model_loader: - kv  30:                tokenizer.ggml.bos_token_id u32              = 1
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llama_model_loader: - kv  31:                tokenizer.ggml.eos_token_id u32              = 2
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llama_model_loader: - kv  32:            tokenizer.ggml.unknown_token_id u32              = 0
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llama_model_loader: - kv  33:               tokenizer.ggml.add_bos_token bool             = true
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llama_model_loader: - kv  34:               tokenizer.ggml.add_eos_token bool             = false
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llama_model_loader: - kv  35:                    tokenizer.chat_template str              = {%- if messages[0]["role"] == "system...
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llama_model_loader: - kv  36:               general.quantization_version u32              = 2
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llama_model_loader: - type  f32:   65 tensors
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llama_model_loader: - type  f16:    1 tensors
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llama_model_loader: - type q4_K:  192 tensors
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llama_model_loader: - type q6_K:   33 tensors
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    468 '[control_466]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    464 '[control_462]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    727 '[control_725]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    343 '[control_341]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    603 '[control_601]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    332 '[control_330]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:     34 '[control_32]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    412 '[control_410]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    675 '[control_673]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    177 '[control_175]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    434 '[control_432]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    166 '[control_164]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    199 '[control_197]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    252 '[control_250]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    742 '[control_740]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    611 '[control_609]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    573 '[control_571]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    455 '[control_453]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    701 '[control_699]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    583 '[control_581]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    433 '[control_431]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    301 '[control_299]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    617 '[control_615]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    536 '[control_534]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    285 '[control_283]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    376 '[control_374]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:     79 '[control_77]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    671 '[control_669]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    391 '[control_389]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    174 '[control_172]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    708 '[control_706]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    729 '[control_727]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    311 '[control_309]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    384 '[control_382]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    766 '[control_764]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:     94 '[control_92]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    304 '[control_302]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    197 '[control_195]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:     17 '[control_15]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    604 '[control_602]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    576 '[control_574]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    359 '[control_357]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    302 '[control_300]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    453 '[control_451]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    374 '[control_372]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    207 '[control_205]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    739 '[control_737]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    689 '[control_687]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    335 '[control_333]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    485 '[control_483]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    283 '[control_281]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    249 '[control_247]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    752 '[control_750]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    330 '[control_328]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    635 '[control_633]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    161 '[control_159]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    731 '[control_729]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    631 '[control_629]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    323 '[control_321]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:     48 '[control_46]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    544 '[control_542]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    687 '[control_685]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    463 '[control_461]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:     47 '[control_45]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:     86 '[control_84]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    331 '[control_329]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:     13 '[control_11]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    760 '[control_758]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    612 '[control_610]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    473 '[control_471]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    601 '[control_599]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    146 '[control_144]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    734 '[control_732]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    141 '[control_139]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    138 '[control_136]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:     61 '[control_59]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:     46 '[control_44]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    173 '[control_171]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    367 '[control_365]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    417 '[control_415]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    740 '[control_738]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    216 '[control_214]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    498 '[control_496]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    512 '[control_510]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    122 '[control_120]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    246 '[control_244]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    745 '[control_743]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    451 '[control_449]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    280 '[control_278]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    654 '[control_652]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    679 '[control_677]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:     77 '[control_75]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:      0 '<unk>' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    638 '[control_636]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    472 '[control_470]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:     59 '[control_57]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    145 '[control_143]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    318 '[control_316]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    640 '[control_638]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    690 '[control_688]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    256 '[control_254]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    476 '[control_474]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:     21 '[control_19]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    288 '[control_286]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    255 '[control_253]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    113 '[control_111]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    190 '[control_188]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    108 '[control_106]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    211 '[control_209]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    551 '[control_549]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:     14 '[control_12]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    737 '[control_735]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    555 '[control_553]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    227 '[control_225]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    210 '[control_208]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    230 '[control_228]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:      7 '[/AVAILABLE_TOOLS]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:     55 '[control_53]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    525 '[control_523]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    533 '[control_531]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    195 '[control_193]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    584 '[control_582]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    203 '[control_201]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    322 '[control_320]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    757 '[control_755]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    642 '[control_640]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    168 '[control_166]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    389 '[control_387]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    368 '[control_366]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    767 '[control_765]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    222 '[control_220]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    420 '[control_418]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    530 '[control_528]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    535 '[control_533]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    765 '[control_763]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    661 '[control_659]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:     88 '[control_86]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    581 '[control_579]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    327 '[control_325]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    201 '[control_199]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    115 '[control_113]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    709 '[control_707]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    291 '[control_289]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    265 '[control_263]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    148 '[control_146]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    185 '[control_183]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    574 '[control_572]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    360 '[control_358]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    127 '[control_125]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    325 '[control_323]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    183 '[control_181]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    116 '[control_114]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    540 '[control_538]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    293 '[control_291]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    559 '[control_557]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    527 '[control_525]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    156 '[control_154]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    338 '[control_336]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    519 '[control_517]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    516 '[control_514]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:     10 '[control_8]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:      8 '[TOOL_RESULTS]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    505 '[control_503]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    503 '[control_501]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    500 '[control_498]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    496 '[control_494]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    492 '[control_490]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    489 '[control_487]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    538 '[control_536]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    596 '[control_594]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    481 '[control_479]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    475 '[control_473]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    336 '[control_334]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    670 '[control_668]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:     50 '[control_48]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    456 '[control_454]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    105 '[control_103]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    421 '[control_419]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    430 '[control_428]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    429 '[control_427]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    575 '[control_573]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    425 '[control_423]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    424 '[control_422]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    680 '[control_678]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:     57 '[control_55]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    356 '[control_354]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    458 '[control_456]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    313 '[control_311]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    418 '[control_416]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:     70 '[control_68]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    759 '[control_757]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    416 '[control_414]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    238 '[control_236]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    568 '[control_566]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    409 '[control_407]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    550 '[control_548]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    571 '[control_569]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    618 '[control_616]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    623 '[control_621]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    247 '[control_245]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    400 '[control_398]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    396 '[control_394]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    392 '[control_390]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    552 '[control_550]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    651 '[control_649]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    390 '[control_388]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    186 '[control_184]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    565 '[control_563]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:     92 '[control_90]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    508 '[control_506]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    373 '[control_371]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    299 '[control_297]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    562 '[control_560]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    537 '[control_535]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    372 '[control_370]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    366 '[control_364]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    196 '[control_194]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    478 '[control_476]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    621 '[control_619]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:     53 '[control_51]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:     40 '[control_38]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    347 '[control_345]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    345 '[control_343]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    339 '[control_337]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    234 '[control_232]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    770 '[control_768]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    444 '[control_442]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    317 '[control_315]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    693 '[control_691]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    321 '[control_319]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    320 '[control_318]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    179 '[control_177]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    214 '[control_212]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    666 '[control_664]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    712 '[control_710]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    303 '[control_301]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    440 '[control_438]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    314 '[control_312]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    397 '[control_395]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    312 '[control_310]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    129 '[control_127]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    545 '[control_543]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:     58 '[control_56]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    509 '[control_507]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    541 '[control_539]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    443 '[control_441]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:     45 '[control_43]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    469 '[control_467]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    532 '[control_530]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:     64 '[control_62]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    365 '[control_363]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    563 '[control_561]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    346 '[control_344]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    282 '[control_280]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    450 '[control_448]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    526 '[control_524]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    672 '[control_670]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    232 '[control_230]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    273 '[control_271]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    272 '[control_270]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    636 '[control_634]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    260 '[control_258]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    518 '[control_516]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    353 '[control_351]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    257 '[control_255]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    126 '[control_124]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    124 '[control_122]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    751 '[control_749]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    383 '[control_381]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    175 '[control_173]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:     75 '[control_73]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:     72 '[control_70]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    614 '[control_612]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    167 '[control_165]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    465 '[control_463]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    341 '[control_339]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    703 '[control_701]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    501 '[control_499]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:     90 '[control_88]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:     89 '[control_87]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    593 '[control_591]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    107 '[control_105]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    241 '[control_239]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    713 '[control_711]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    212 '[control_210]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:     80 '[control_78]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    707 '[control_705]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    371 '[control_369]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    628 '[control_626]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:     15 '[control_13]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    354 '[control_352]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:     25 '[control_23]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    261 '[control_259]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    435 '[control_433]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    307 '[control_305]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    305 '[control_303]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    656 '[control_654]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    702 '[control_700]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    428 '[control_426]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    499 '[control_497]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    154 '[control_152]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    308 '[control_306]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    286 '[control_284]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    634 '[control_632]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:     51 '[control_49]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    599 '[control_597]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    606 '[control_604]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:     30 '[control_28]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    250 '[control_248]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    714 '[control_712]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    270 '[control_268]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:     83 '[control_81]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    730 '[control_728]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    743 '[control_741]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    484 '[control_482]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    758 '[control_756]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    271 '[control_269]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    279 '[control_277]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:     73 '[control_71]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    363 '[control_361]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:     60 '[control_58]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    405 '[control_403]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    220 '[control_218]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    436 '[control_434]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:     27 '[control_25]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    652 '[control_650]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    646 '[control_644]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    395 '[control_393]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    549 '[control_547]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:     12 '[control_10]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    229 '[control_227]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    162 '[control_160]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    497 '[control_495]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:     31 '[control_29]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:     98 '[control_96]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    686 '[control_684]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:      3 '[INST]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    155 '[control_153]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    470 '[control_468]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:     69 '[control_67]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:     93 '[control_91]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:     71 '[control_69]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:     11 '[control_9]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:     43 '[control_41]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:     22 '[control_20]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:     35 '[control_33]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    706 '[control_704]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    511 '[control_509]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    491 '[control_489]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    324 '[control_322]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    655 '[control_653]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    117 '[control_115]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    665 '[control_663]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:      9 '[/TOOL_RESULTS]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:     29 '[control_27]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:     44 '[control_42]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    310 '[control_308]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    157 '[control_155]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    515 '[control_513]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    388 '[control_386]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    438 '[control_436]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    486 '[control_484]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    139 '[control_137]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    543 '[control_541]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    622 '[control_620]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    598 '[control_596]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:     16 '[control_14]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:     39 '[control_37]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    102 '[control_100]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    673 '[control_671]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    287 '[control_285]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    244 '[control_242]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    446 '[control_444]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    483 '[control_481]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    467 '[control_465]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    264 '[control_262]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    176 '[control_174]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    625 '[control_623]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    160 '[control_158]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:     20 '[control_18]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    641 '[control_639]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:     99 '[control_97]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:     54 '[control_52]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:     37 '[control_35]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    401 '[control_399]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    130 '[control_128]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    218 '[control_216]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    243 '[control_241]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    753 '[control_751]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:     74 '[control_72]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    171 '[control_169]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    151 '[control_149]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    364 '[control_362]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    495 '[control_493]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    119 '[control_117]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    217 '[control_215]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:     84 '[control_82]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:      5 '[TOOL_CALLS]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    531 '[control_529]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:     33 '[control_31]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:     82 '[control_80]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    100 '[control_98]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    125 '[control_123]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    520 '[control_518]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    144 '[control_142]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    152 '[control_150]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    592 '[control_590]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    461 '[control_459]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    624 '[control_622]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:     65 '[control_63]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    172 '[control_170]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    178 '[control_176]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    258 '[control_256]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    524 '[control_522]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    657 '[control_655]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    184 '[control_182]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    441 '[control_439]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    315 '[control_313]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    662 '[control_660]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:      6 '[AVAILABLE_TOOLS]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    517 '[control_515]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    194 '[control_192]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    447 '[control_445]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:     52 '[control_50]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    718 '[control_716]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    692 '[control_690]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    290 '[control_288]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    763 '[control_761]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    362 '[control_360]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    200 '[control_198]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    204 '[control_202]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    722 '[control_720]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    351 '[control_349]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    349 '[control_347]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:     38 '[control_36]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    134 '[control_132]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:     67 '[control_65]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    239 '[control_237]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    570 '[control_568]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    253 '[control_251]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    221 '[control_219]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    664 '[control_662]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    225 '[control_223]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    226 '[control_224]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    553 '[control_551]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    242 '[control_240]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    633 '[control_631]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    580 '[control_578]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    245 '[control_243]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    620 '[control_618]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    191 '[control_189]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:     87 '[control_85]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    189 '[control_187]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    542 '[control_540]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    548 '[control_546]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    558 '[control_556]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    560 '[control_558]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    564 '[control_562]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    410 '[control_408]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    566 '[control_564]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    649 '[control_647]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    414 '[control_412]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    567 '[control_565]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    569 '[control_567]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    761 '[control_759]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    408 '[control_406]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    579 '[control_577]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    147 '[control_145]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    236 '[control_234]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    588 '[control_586]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    292 '[control_290]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    591 '[control_589]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    645 '[control_643]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    140 '[control_138]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    422 '[control_420]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    595 '[control_593]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    597 '[control_595]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    754 '[control_752]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    159 '[control_157]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    344 '[control_342]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    393 '[control_391]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    691 '[control_689]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    608 '[control_606]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    663 '[control_661]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    613 '[control_611]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    340 '[control_338]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    616 '[control_614]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    719 '[control_717]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    521 '[control_519]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    619 '[control_617]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    523 '[control_521]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    626 '[control_624]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    695 '[control_693]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    637 '[control_635]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    235 '[control_233]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    659 '[control_657]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    268 '[control_266]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    406 '[control_404]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    735 '[control_733]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    398 '[control_396]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    674 '[control_672]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    684 '[control_682]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    462 '[control_460]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    382 '[control_380]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    697 '[control_695]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    698 '[control_696]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    699 '[control_697]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    688 '[control_686]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    704 '[control_702]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    705 '[control_703]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    205 '[control_203]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    726 '[control_724]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    180 '[control_178]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    716 '[control_714]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    590 '[control_588]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    454 '[control_452]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    728 '[control_726]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    738 '[control_736]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    744 '[control_742]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    403 '[control_401]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    764 '[control_762]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    676 '[control_674]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    756 '[control_754]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    380 '[control_378]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    319 '[control_317]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    600 '[control_598]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    297 '[control_295]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    259 '[control_257]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    639 '[control_637]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    529 '[control_527]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    101 '[control_99]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    522 '[control_520]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    723 '[control_721]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    254 '[control_252]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    513 '[control_511]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    667 '[control_665]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    267 '[control_265]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    732 '[control_730]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:     24 '[control_22]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    650 '[control_648]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    528 '[control_526]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    749 '[control_747]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    721 '[control_719]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    103 '[control_101]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    294 '[control_292]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:     41 '[control_39]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    133 '[control_131]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    188 '[control_186]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    276 '[control_274]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    644 '[control_642]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    648 '[control_646]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    459 '[control_457]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    112 '[control_110]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    300 '[control_298]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    206 '[control_204]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    121 '[control_119]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    750 '[control_748]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    131 '[control_129]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    474 '[control_472]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    685 '[control_683]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    251 '[control_249]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    402 '[control_400]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    281 '[control_279]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    192 '[control_190]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    387 '[control_385]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    587 '[control_585]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:     66 '[control_64]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    394 '[control_392]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:     49 '[control_47]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:     42 '[control_40]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:     32 '[control_30]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    399 '[control_397]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    448 '[control_446]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    479 '[control_477]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    493 '[control_491]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    736 '[control_734]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    348 '[control_346]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    193 '[control_191]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    231 '[control_229]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    609 '[control_607]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    213 '[control_211]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    128 '[control_126]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    118 '[control_116]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    369 '[control_367]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    630 '[control_628]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    755 '[control_753]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    747 '[control_745]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    289 '[control_287]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:     26 '[control_24]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:     63 '[control_61]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    284 '[control_282]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    164 '[control_162]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    404 '[control_402]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    506 '[control_504]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    123 '[control_121]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    237 '[control_235]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:     62 '[control_60]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    510 '[control_508]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    233 '[control_231]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:     68 '[control_66]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    487 '[control_485]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    471 '[control_469]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    415 '[control_413]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:     78 '[control_76]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    610 '[control_608]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    137 '[control_135]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    539 '[control_537]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    658 '[control_656]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    158 '[control_156]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    585 '[control_583]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    215 '[control_213]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    554 '[control_552]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    762 '[control_760]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    717 '[control_715]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    228 '[control_226]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    442 '[control_440]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    494 '[control_492]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:     97 '[control_95]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    683 '[control_681]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    629 '[control_627]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    725 '[control_723]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    432 '[control_430]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    477 '[control_475]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    355 '[control_353]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:     36 '[control_34]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    534 '[control_532]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    120 '[control_118]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:     28 '[control_26]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    306 '[control_304]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    407 '[control_405]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    696 '[control_694]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    274 '[control_272]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    142 '[control_140]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    136 '[control_134]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    309 '[control_307]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    423 '[control_421]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    724 '[control_722]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    262 '[control_260]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    419 '[control_417]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    329 '[control_327]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    427 '[control_425]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    370 '[control_368]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    266 '[control_264]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    710 '[control_708]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    602 '[control_600]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    277 '[control_275]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    298 '[control_296]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    378 '[control_376]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    198 '[control_196]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:     76 '[control_74]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    607 '[control_605]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    682 '[control_680]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    333 '[control_331]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    660 '[control_658]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    163 '[control_161]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:     95 '[control_93]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    377 '[control_375]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    223 '[control_221]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    326 '[control_324]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    111 '[control_109]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    187 '[control_185]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    678 '[control_676]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    514 '[control_512]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    431 '[control_429]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:      4 '[/INST]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    342 '[control_340]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    594 '[control_592]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    768 '[control_766]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    143 '[control_141]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    445 '[control_443]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    165 '[control_163]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    439 '[control_437]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    181 '[control_179]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    352 '[control_350]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    643 '[control_641]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    182 '[control_180]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:     19 '[control_17]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    269 '[control_267]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    677 '[control_675]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    615 '[control_613]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    170 '[control_168]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:     56 '[control_54]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    582 '[control_580]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    700 '[control_698]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    561 '[control_559]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    381 '[control_379]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    647 '[control_645]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    437 '[control_435]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    507 '[control_505]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    490 '[control_488]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    586 '[control_584]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:     23 '[control_21]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    452 '[control_450]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    605 '[control_603]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    426 '[control_424]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    769 '[control_767]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:     81 '[control_79]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    386 '[control_384]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    627 '[control_625]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:     18 '[control_16]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    741 '[control_739]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:     96 '[control_94]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    502 '[control_500]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    482 '[control_480]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    480 '[control_478]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    557 '[control_555]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    263 '[control_261]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    668 '[control_666]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    466 '[control_464]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    334 '[control_332]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    413 '[control_411]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    572 '[control_570]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    295 '[control_293]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    150 '[control_148]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    275 '[control_273]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    748 '[control_746]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    135 '[control_133]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    357 '[control_355]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    577 '[control_575]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    578 '[control_576]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    556 '[control_554]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    375 '[control_373]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    589 '[control_587]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    202 '[control_200]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:     85 '[control_83]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    278 '[control_276]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    169 '[control_167]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    208 '[control_206]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    488 '[control_486]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    337 '[control_335]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    733 '[control_731]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    109 '[control_107]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    547 '[control_545]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    350 '[control_348]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    132 '[control_130]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    114 '[control_112]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    248 '[control_246]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    328 '[control_326]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    104 '[control_102]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    449 '[control_447]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    711 '[control_709]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    715 '[control_713]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    358 '[control_356]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    746 '[control_744]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    385 '[control_383]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    720 '[control_718]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:      2 '</s>' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    460 '[control_458]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    632 '[control_630]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    296 '[control_294]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    240 '[control_238]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    361 '[control_359]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    504 '[control_502]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    149 '[control_147]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:      1 '<s>' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    219 '[control_217]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    106 '[control_104]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    669 '[control_667]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    411 '[control_409]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    546 '[control_544]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    379 '[control_377]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    209 '[control_207]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    110 '[control_108]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    681 '[control_679]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    153 '[control_151]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    457 '[control_455]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:     91 '[control_89]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    224 '[control_222]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    653 '[control_651]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    694 '[control_692]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: control token:    316 '[control_314]' is not marked as EOG
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: special_eos_id is not in special_eog_ids - the tokenizer config may be incorrect
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: special tokens cache size = 771
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_vocab: token to piece cache size = 0.1731 MB
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_print_meta: format           = GGUF V3 (latest)
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_print_meta: arch             = llama
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_print_meta: vocab type       = SPM
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_print_meta: n_vocab          = 32768
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_print_meta: n_merges         = 0
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_print_meta: vocab_only       = 0
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_print_meta: n_ctx_train      = 32768
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_print_meta: n_embd           = 4096
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_print_meta: n_layer          = 32
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_print_meta: n_head           = 32
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_print_meta: n_head_kv        = 8
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_print_meta: n_rot            = 128
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_print_meta: n_swa            = 0
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_print_meta: n_embd_head_k    = 128
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_print_meta: n_embd_head_v    = 128
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_print_meta: n_gqa            = 4
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_print_meta: n_embd_k_gqa     = 1024
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_print_meta: n_embd_v_gqa     = 1024
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_print_meta: f_norm_eps       = 0.0e+00
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_print_meta: f_norm_rms_eps   = 1.0e-05
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_print_meta: f_clamp_kqv      = 0.0e+00
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_print_meta: f_max_alibi_bias = 0.0e+00
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_print_meta: f_logit_scale    = 0.0e+00
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_print_meta: n_ff             = 14336
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_print_meta: n_expert         = 0
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_print_meta: n_expert_used    = 0
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_print_meta: causal attn      = 1
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_print_meta: pooling type     = 0
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_print_meta: rope type        = 0
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_print_meta: rope scaling     = linear
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_print_meta: freq_base_train  = 1000000.0
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_print_meta: freq_scale_train = 1
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_print_meta: n_ctx_orig_yarn  = 32768
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_print_meta: rope_finetuned   = unknown
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_print_meta: ssm_d_conv       = 0
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_print_meta: ssm_d_inner      = 0
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_print_meta: ssm_d_state      = 0
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_print_meta: ssm_dt_rank      = 0
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_print_meta: ssm_dt_b_c_rms   = 0
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_print_meta: model type       = 7B
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_print_meta: model ftype      = Q4_K - Medium
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_print_meta: model params     = 7.25 B
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_print_meta: model size       = 4.25 GiB (5.04 BPW) 
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_print_meta: general.name     = Mistral 7B Instruct v0.3
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_print_meta: BOS token        = 1 '<s>'
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_print_meta: EOS token        = 2 '</s>'
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_print_meta: UNK token        = 0 '<unk>'
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_print_meta: LF token         = 781 '<0x0A>'
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_print_meta: EOG token        = 2 '</s>'
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_print_meta: max token length = 48
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_tensors: tensor 'token_embd.weight' (f16) (and 290 others) cannot be used with preferred buffer type CPU_AARCH64, using CPU instead
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llm_load_tensors:   CPU_Mapped model buffer size =  4353.52 MiB
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr .............................................................................................
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llama_new_context_with_model: n_seq_max     = 1
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llama_new_context_with_model: n_ctx         = 4096
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llama_new_context_with_model: n_ctx_per_seq = 4096
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llama_new_context_with_model: n_batch       = 512
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llama_new_context_with_model: n_ubatch      = 512
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llama_new_context_with_model: flash_attn    = 0
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llama_new_context_with_model: freq_base     = 1000000.0
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llama_new_context_with_model: freq_scale    = 1
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llama_new_context_with_model: n_ctx_per_seq (4096) < n_ctx_train (32768) -- the full capacity of the model will not be utilized
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llama_kv_cache_init: kv_size = 4096, offload = 1, type_k = 'f16', type_v = 'f16', n_layer = 32, can_shift = 1
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llama_kv_cache_init: layer 0: n_embd_k_gqa = 1024, n_embd_v_gqa = 1024
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llama_kv_cache_init: layer 1: n_embd_k_gqa = 1024, n_embd_v_gqa = 1024
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llama_kv_cache_init: layer 2: n_embd_k_gqa = 1024, n_embd_v_gqa = 1024
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llama_kv_cache_init: layer 3: n_embd_k_gqa = 1024, n_embd_v_gqa = 1024
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llama_kv_cache_init: layer 4: n_embd_k_gqa = 1024, n_embd_v_gqa = 1024
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llama_kv_cache_init: layer 5: n_embd_k_gqa = 1024, n_embd_v_gqa = 1024
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llama_kv_cache_init: layer 6: n_embd_k_gqa = 1024, n_embd_v_gqa = 1024
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llama_kv_cache_init: layer 7: n_embd_k_gqa = 1024, n_embd_v_gqa = 1024
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llama_kv_cache_init: layer 8: n_embd_k_gqa = 1024, n_embd_v_gqa = 1024
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llama_kv_cache_init: layer 9: n_embd_k_gqa = 1024, n_embd_v_gqa = 1024
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llama_kv_cache_init: layer 10: n_embd_k_gqa = 1024, n_embd_v_gqa = 1024
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llama_kv_cache_init: layer 11: n_embd_k_gqa = 1024, n_embd_v_gqa = 1024
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llama_kv_cache_init: layer 12: n_embd_k_gqa = 1024, n_embd_v_gqa = 1024
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llama_kv_cache_init: layer 13: n_embd_k_gqa = 1024, n_embd_v_gqa = 1024
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llama_kv_cache_init: layer 14: n_embd_k_gqa = 1024, n_embd_v_gqa = 1024
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llama_kv_cache_init: layer 15: n_embd_k_gqa = 1024, n_embd_v_gqa = 1024
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llama_kv_cache_init: layer 16: n_embd_k_gqa = 1024, n_embd_v_gqa = 1024
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llama_kv_cache_init: layer 17: n_embd_k_gqa = 1024, n_embd_v_gqa = 1024
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llama_kv_cache_init: layer 18: n_embd_k_gqa = 1024, n_embd_v_gqa = 1024
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llama_kv_cache_init: layer 19: n_embd_k_gqa = 1024, n_embd_v_gqa = 1024
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llama_kv_cache_init: layer 20: n_embd_k_gqa = 1024, n_embd_v_gqa = 1024
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llama_kv_cache_init: layer 21: n_embd_k_gqa = 1024, n_embd_v_gqa = 1024
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llama_kv_cache_init: layer 22: n_embd_k_gqa = 1024, n_embd_v_gqa = 1024
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llama_kv_cache_init: layer 23: n_embd_k_gqa = 1024, n_embd_v_gqa = 1024
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llama_kv_cache_init: layer 24: n_embd_k_gqa = 1024, n_embd_v_gqa = 1024
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llama_kv_cache_init: layer 25: n_embd_k_gqa = 1024, n_embd_v_gqa = 1024
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llama_kv_cache_init: layer 26: n_embd_k_gqa = 1024, n_embd_v_gqa = 1024
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llama_kv_cache_init: layer 27: n_embd_k_gqa = 1024, n_embd_v_gqa = 1024
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llama_kv_cache_init: layer 28: n_embd_k_gqa = 1024, n_embd_v_gqa = 1024
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llama_kv_cache_init: layer 29: n_embd_k_gqa = 1024, n_embd_v_gqa = 1024
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llama_kv_cache_init: layer 30: n_embd_k_gqa = 1024, n_embd_v_gqa = 1024
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llama_kv_cache_init: layer 31: n_embd_k_gqa = 1024, n_embd_v_gqa = 1024
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llama_kv_cache_init:        CPU KV buffer size =   512.00 MiB
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llama_new_context_with_model: KV self size  =  512.00 MiB, K (f16):  256.00 MiB, V (f16):  256.00 MiB
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llama_new_context_with_model:        CPU  output buffer size =     0.12 MiB
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llama_new_context_with_model:        CPU compute buffer size =   296.01 MiB
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llama_new_context_with_model: graph nodes  = 1030
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr llama_new_context_with_model: graph splits = 1
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr common_init_from_params: setting dry_penalty_last_n to ctx_size = 4096
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stderr common_init_from_params: warming up the model with an empty run - please wait ... (--no-warmup to disable)
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stdout {"timestamp":1737394911,"level":"INFO","function":"initialize","line":547,"message":"initializing slots","n_slots":1}
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stdout {"timestamp":1737394911,"level":"INFO","function":"initialize","line":556,"message":"new slot","slot_id":0,"n_ctx_slot":4096}
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stdout {"timestamp":1737394911,"level":"INFO","function":"launch_slot_with_data","line":927,"message":"slot is processing task","slot_id":0,"task_id":0}
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stdout {"timestamp":1737394911,"level":"INFO","function":"update_slots","line":1823,"message":"kv cache rm [p0, end)","slot_id":0,"task_id":0,"p0":0}
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stdout {"timestamp":1737394917,"level":"INFO","function":"print_timings","line":327,"message":"prompt eval time     =     263.51 ms /     9 tokens (   29.28 ms per token,    34.15 tokens per second)","slot_id":0,"task_id":0,"t_prompt_processing":263.507,"num_prompt_tokens_processed":9,"t_token":29.278555555555556,"n_tokens_second":34.154690387731634}
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stdout {"timestamp":1737394917,"level":"INFO","function":"print_timings","line":341,"message":"generation eval time =    5542.28 ms /    39 runs   (  142.11 ms per token,     7.04 tokens per second)","slot_id":0,"task_id":0,"t_token_generation":5542.28,"n_decoded":39,"t_token":142.10974358974357,"n_tokens_second":7.036815173538689}
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stdout {"timestamp":1737394917,"level":"INFO","function":"print_timings","line":351,"message":"          total time =    5805.79 ms","slot_id":0,"task_id":0,"t_prompt_processing":263.507,"t_token_generation":5542.28,"t_total":5805.786999999999}
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stdout {"timestamp":1737394917,"level":"INFO","function":"update_slots","line":1634,"message":"slot released","slot_id":0,"task_id":0,"n_ctx":4096,"n_past":47,"n_system_tokens":0,"n_cache_tokens":48,"truncated":false}
+[90m5:41PM[0m DBG GRPC(ggml-Mistral-7b-instruct-gpu-127.0.0.1:42843): stdout {"timestamp":1737394917,"level":"INFO","function":"update_slots","line":1587,"message":"all slots are idle and system prompt is empty, clear the KV cache"}
+[90m5:41PM[0m DBG Response: {"created":1737394909,"object":"chat.completion","id":"a657f806-8fb2-4fea-981e-4824715a1cc7","model":"ggml-Mistral-7b-instruct-gpu","choices":[{"index":0,"finish_reason":"stop","message":{"role":"assistant","content":"I am an AI, I don't have feelings or emotions. However, I'm here to help you with any questions or tasks you have! How can I help you today?\u003c/s\u003e"}}],"usage":{"prompt_tokens":9,"completion_tokens":39,"total_tokens":48}}
+[90m5:41PM[0m [32mINF[0m [1mSuccess[0m [36mip=[0m127.0.0.1 [36mlatency=[0m8.327949486s [36mmethod=[0mPOST [36mstatus=[0m200 [36murl=[0m/v1/chat/completions
