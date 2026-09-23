@@ -1,0 +1,116 @@
+[1730368686] Log start
+[1730368686] Cmd: ./llama.cpp/llama-cli -m /media/ain/Win11/prj/models/microsoft/Phi-3.5-mini-instruct/ggml-Phi-3.5-mini-instruct-f16.gguf -p INST -ngl 0
+[1730368686] main: build = 3615 (1731d423)
+[1730368686] main: built with cc (Ubuntu 11.4.0-1ubuntu1~22.04) 11.4.0 for x86_64-linux-gnu
+[1730368686] main: seed  = 1730368686
+[1730368686] main: llama backend init
+[1730368686] main: load the model and apply lora adapter, if any
+[1730368686] llama_model_loader: loaded meta data with 36 key-value pairs and 197 tensors from /media/ain/Win11/prj/models/microsoft/Phi-3.5-mini-instruct/ggml-Phi-3.5-mini-instruct-f16.gguf (version GGUF V3 (latest))
+[1730368686] llama_model_loader: Dumping metadata keys/values. Note: KV overrides do not apply in this output.
+[1730368686] llama_model_loader: - kv   0:                       general.architecture str              = phi3
+[1730368686] llama_model_loader: - kv   1:                               general.type str              = model
+[1730368686] llama_model_loader: - kv   2:                               general.name str              = Phi 3.5 Mini Instruct
+[1730368686] llama_model_loader: - kv   3:                           general.finetune str              = instruct
+[1730368686] llama_model_loader: - kv   4:                           general.basename str              = Phi-3.5
+[1730368686] llama_model_loader: - kv   5:                         general.size_label str              = mini
+[1730368686] llama_model_loader: - kv   6:                            general.license str              = mit
+[1730368686] llama_model_loader: - kv   7:                       general.license.link str              = https://huggingface.co/microsoft/Phi-...
+[1730368686] llama_model_loader: - kv   8:                               general.tags arr[str,3]       = ["nlp", "code", "text-generation"]
+[1730368686] llama_model_loader: - kv   9:                          general.languages arr[str,1]       = ["multilingual"]
+[1730368686] llama_model_loader: - kv  10:                        phi3.context_length u32              = 131072
+[1730368686] llama_model_loader: - kv  11:  phi3.rope.scaling.original_context_length u32              = 4096
+[1730368686] llama_model_loader: - kv  12:                      phi3.embedding_length u32              = 3072
+[1730368686] llama_model_loader: - kv  13:                   phi3.feed_forward_length u32              = 8192
+[1730368686] llama_model_loader: - kv  14:                           phi3.block_count u32              = 32
+[1730368686] llama_model_loader: - kv  15:                  phi3.attention.head_count u32              = 32
+[1730368686] llama_model_loader: - kv  16:               phi3.attention.head_count_kv u32              = 32
+[1730368686] llama_model_loader: - kv  17:      phi3.attention.layer_norm_rms_epsilon f32              = 0.000010
+[1730368686] llama_model_loader: - kv  18:                  phi3.rope.dimension_count u32              = 96
+[1730368686] llama_model_loader: - kv  19:                        phi3.rope.freq_base f32              = 10000.000000
+[1730368686] llama_model_loader: - kv  20:                          general.file_type u32              = 1
+[1730368686] llama_model_loader: - kv  21:              phi3.attention.sliding_window u32              = 262144
+[1730368686] llama_model_loader: - kv  22:              phi3.rope.scaling.attn_factor f32              = 1.190238
+[1730368686] llama_model_loader: - kv  23:                       tokenizer.ggml.model str              = llama
+[1730368686] llama_model_loader: - kv  24:                         tokenizer.ggml.pre str              = default
+[1730368686] llama_model_loader: - kv  25:                      tokenizer.ggml.tokens arr[str,32064]   = ["<unk>", "<s>", "</s>", "<0x00>", "<...
+[1730368686] llama_model_loader: - kv  26:                      tokenizer.ggml.scores arr[f32,32064]   = [-1000.000000, -1000.000000, -1000.00...
+[1730368686] llama_model_loader: - kv  27:                  tokenizer.ggml.token_type arr[i32,32064]   = [3, 3, 4, 6, 6, 6, 6, 6, 6, 6, 6, 6, ...
+[1730368686] llama_model_loader: - kv  28:                tokenizer.ggml.bos_token_id u32              = 1
+[1730368686] llama_model_loader: - kv  29:                tokenizer.ggml.eos_token_id u32              = 32000
+[1730368686] llama_model_loader: - kv  30:            tokenizer.ggml.unknown_token_id u32              = 0
+[1730368686] llama_model_loader: - kv  31:            tokenizer.ggml.padding_token_id u32              = 32000
+[1730368686] llama_model_loader: - kv  32:               tokenizer.ggml.add_bos_token bool             = false
+[1730368686] llama_model_loader: - kv  33:               tokenizer.ggml.add_eos_token bool             = false
+[1730368686] llama_model_loader: - kv  34:                    tokenizer.chat_template str              = {% for message in messages %}{% if me...
+[1730368686] llama_model_loader: - kv  35:               general.quantization_version u32              = 2
+[1730368686] llama_model_loader: - type  f32:   67 tensors
+[1730368686] llama_model_loader: - type  f16:  130 tensors
+[1730368686] llm_load_vocab: special tokens cache size = 14
+[1730368686] llm_load_vocab: token to piece cache size = 0.1685 MB
+[1730368686] llm_load_print_meta: format           = GGUF V3 (latest)
+[1730368686] llm_load_print_meta: arch             = phi3
+[1730368686] llm_load_print_meta: vocab type       = SPM
+[1730368686] llm_load_print_meta: n_vocab          = 32064
+[1730368686] llm_load_print_meta: n_merges         = 0
+[1730368686] llm_load_print_meta: vocab_only       = 0
+[1730368686] llm_load_print_meta: n_ctx_train      = 131072
+[1730368686] llm_load_print_meta: n_embd           = 3072
+[1730368686] llm_load_print_meta: n_layer          = 32
+[1730368686] llm_load_print_meta: n_head           = 32
+[1730368686] llm_load_print_meta: n_head_kv        = 32
+[1730368686] llm_load_print_meta: n_rot            = 96
+[1730368686] llm_load_print_meta: n_swa            = 262144
+[1730368686] llm_load_print_meta: n_embd_head_k    = 96
+[1730368686] llm_load_print_meta: n_embd_head_v    = 96
+[1730368686] llm_load_print_meta: n_gqa            = 1
+[1730368686] llm_load_print_meta: n_embd_k_gqa     = 3072
+[1730368686] llm_load_print_meta: n_embd_v_gqa     = 3072
+[1730368686] llm_load_print_meta: f_norm_eps       = 0.0e+00
+[1730368686] llm_load_print_meta: f_norm_rms_eps   = 1.0e-05
+[1730368686] llm_load_print_meta: f_clamp_kqv      = 0.0e+00
+[1730368686] llm_load_print_meta: f_max_alibi_bias = 0.0e+00
+[1730368686] llm_load_print_meta: f_logit_scale    = 0.0e+00
+[1730368686] llm_load_print_meta: n_ff             = 8192
+[1730368686] llm_load_print_meta: n_expert         = 0
+[1730368686] llm_load_print_meta: n_expert_used    = 0
+[1730368686] llm_load_print_meta: causal attn      = 1
+[1730368686] llm_load_print_meta: pooling type     = 0
+[1730368686] llm_load_print_meta: rope type        = 2
+[1730368686] llm_load_print_meta: rope scaling     = linear
+[1730368686] llm_load_print_meta: freq_base_train  = 10000.0
+[1730368686] llm_load_print_meta: freq_scale_train = 1
+[1730368686] llm_load_print_meta: n_ctx_orig_yarn  = 4096
+[1730368686] llm_load_print_meta: rope_finetuned   = unknown
+[1730368686] llm_load_print_meta: ssm_d_conv       = 0
+[1730368686] llm_load_print_meta: ssm_d_inner      = 0
+[1730368686] llm_load_print_meta: ssm_d_state      = 0
+[1730368686] llm_load_print_meta: ssm_dt_rank      = 0
+[1730368686] llm_load_print_meta: ssm_dt_b_c_rms   = 0
+[1730368686] llm_load_print_meta: model type       = 3B
+[1730368686] llm_load_print_meta: model ftype      = F16
+[1730368686] llm_load_print_meta: model params     = 3.82 B
+[1730368686] llm_load_print_meta: model size       = 7.12 GiB (16.00 BPW) 
+[1730368686] llm_load_print_meta: general.name     = Phi 3.5 Mini Instruct
+[1730368686] llm_load_print_meta: BOS token        = 1 '<s>'
+[1730368686] llm_load_print_meta: EOS token        = 32000 '<|endoftext|>'
+[1730368686] llm_load_print_meta: UNK token        = 0 '<unk>'
+[1730368686] llm_load_print_meta: PAD token        = 32000 '<|endoftext|>'
+[1730368686] llm_load_print_meta: LF token         = 13 '<0x0A>'
+[1730368686] llm_load_print_meta: EOT token        = 32007 '<|end|>'
+[1730368686] llm_load_print_meta: max token length = 48
+[1730368686] ggml_cuda_init: GGML_CUDA_FORCE_MMQ:    no
+[1730368686] ggml_cuda_init: GGML_CUDA_FORCE_CUBLAS: no
+[1730368686] ggml_cuda_init: found 1 CUDA devices:
+[1730368686]   Device 0: NVIDIA GeForce RTX 3060, compute capability 8.6, VMM: yes
+[1730368686] llm_load_tensors: ggml ctx size =    0.10 MiB
+[1730368689] llm_load_tensors: offloading 0 repeating layers to GPU
+[1730368689] llm_load_tensors: offloaded 0/33 layers to GPU
+[1730368689] llm_load_tensors:        CPU buffer size =  7288.51 MiB
+[1730368689] .[1730368689] .[1730368689] .[1730368689] .[1730368689] .[1730368689] .[1730368689] .[1730368689] .[1730368689] .[1730368689] .[1730368689] .[1730368689] .[1730368689] .[1730368689] .[1730368689] .[1730368689] .[1730368689] .[1730368689] .[1730368689] .[1730368689] .[1730368689] .[1730368689] .[1730368689] .[1730368689] .[1730368689] .[1730368689] .[1730368689] .[1730368689] .[1730368689] .[1730368689] .[1730368689] .[1730368689] .[1730368689] .[1730368689] .[1730368689] .[1730368689] .[1730368689] .[1730368689] .[1730368689] .[1730368689] .[1730368689] .[1730368689] .[1730368689] .[1730368689] .[1730368689] .[1730368689] .[1730368689] .[1730368689] .[1730368689] .[1730368689] .[1730368689] .[1730368689] .[1730368689] .[1730368689] .[1730368689] .[1730368689] .[1730368689] .[1730368689] .[1730368689] .[1730368689] .[1730368689] .[1730368689] .[1730368689] .[1730368689] .[1730368689] .[1730368689] .[1730368689] .[1730368689] .[1730368689] .[1730368689] .[1730368689] .[1730368689] .[1730368689] .[1730368689] .[1730368689] .[1730368689] .[1730368689] .[1730368689] .[1730368689] .[1730368689] .[1730368689] .[1730368689] .[1730368689] .[1730368689] .[1730368689] .[1730368689] 
+[1730368689] llama_new_context_with_model: n_ctx      = 131072
+[1730368689] llama_new_context_with_model: n_batch    = 2048
+[1730368689] llama_new_context_with_model: n_ubatch   = 512
+[1730368689] llama_new_context_with_model: flash_attn = 0
+[1730368689] llama_new_context_with_model: freq_base  = 10000.0
+[1730368689] llama_new_context_with_model: freq_scale = 1
+[1730368689] ggml_cuda_host_malloc: failed to allocate 49152.00 MiB of pinned memory: out of memory

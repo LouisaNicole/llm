@@ -1,0 +1,6 @@
+artifact/
+paper/results/
+*.zip
+**/build/
+*.gguf
+.vscode/
